@@ -5,7 +5,7 @@
 
 import os
 
-from bitstring import BitArray, Bits, BitStream
+from bitstring import BitArray
 
 if __name__ == "__main__":
     S = 0
@@ -103,6 +103,10 @@ if __name__ == "__main__":
                 bits_read += 1
                 counter = 0
         m = open(message, 'wb')
-        m.write(PM.bytes[:bits_decoded//8])
+        m.write(PM.bytes[:bits_decoded // 8])
         m.close()
-        print(PM.bytes[:bits_decoded//8].decode('utf-8'))
+        print(PM.bytes[:bits_decoded // 8].decode('utf-8'))
+
+# How someone could find M or P, given (only) L.
+#     Given L, search file for each possible S so that one combination of S and L will reproduce M.
+#     Given L, search file for possible M, then replace M bits with alternative bits to reproduce P.
