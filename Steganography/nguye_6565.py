@@ -12,13 +12,13 @@ if __name__ == "__main__":
     L = 0
     C = "1"
     while True:
-        # plaintext = input("Plaintext file?")
-        plaintext = "lorem_ipsum.txt"
+        plaintext = input("Plaintext file?")
+        # plaintext = "lorem_ipsum.txt"
         if not os.path.exists(plaintext):
             print("P does not exist.")
             continue
-        # message = input("Message file?")
-        message = "hw.txt"
+        message = input("Message file?")
+        # message = "hw.txt"
         if not os.path.exists(message):
             print("M does not exist.")
             continue
